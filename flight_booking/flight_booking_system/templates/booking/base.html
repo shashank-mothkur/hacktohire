@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>FLIGHT TICKET BOOKING</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="Booking-form-box">
+            <form action="form-group"  method="POST">
+                <div class="radio-btn">
+                    <input type="radio"class="btn" value="round" name="check" checked="checked">
+                    <span>Roundtrip</span>
+                    <input type="radio"class="btn" value="oneway" name="check"><span>One way</span>
+                    <input type="radio"class="btn" value="multway" name="check"><span>Multi way</span>
+                </div>
+                <div class="Booking-form">
+                    <label>Flying form</label>
+                    <input type= "text" class="form-control" name="from" aria-placeholder="city or Airport">
+                    <label>Flying</label>
+                    <input type= "text" class="form-control" name="to" aria-placeholder="city or Airport">
+                </div>
+                <div class="input-grp">
+                    <label>Departing</label>
+                    <input type="date" name="departing" class="form-control select date">
+                </div>
+                <div class="input-grp">
+                    <label>Returning</label>
+                    <input type="date" name="returning" class="form-control select date">
+                </div>
+                <div class="input-grp">
+                    <label>No of passengers</label>
+                    <input type="number" name="no_of_passengers" class="form-control " values="0">
+                </div>
+                <div class="input-grp">
+                    <label>Travel class</label>
+                    <select class="custom-select" name="classes">
+                        <option value="1">economy</option>
+                        <option value="2">premium economy</option>
+                        <option value="3">bussiness</option>
+                        <option value="4">first class</option>
+                    </select>
+                </div>
+                <br>
+            <div class="input-grp">
+                <button type="button" class="btn btn-primary flights">Show flights</button>
+            </div>
+         </form>
+        </div>
+
+    </body>
+</html>
